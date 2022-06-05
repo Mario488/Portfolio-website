@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap" rel="stylesheet" />
+    <title>Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="syles.css" />
+</head>
+
+<body>
+    <nav id="navbar">
+        <a href="#page1">About</a>
+        <a href="#page2">Work</a>
+        <a href="#page3">Contact</a>
+    </nav>
+    
+    <div id="page1">
+        <section id="welcome-section">
+            <h1 id="h1_p1">Hey i am Mario</h1>
+            <h4 id="job">a web developer</h4>
+        </section>
+    </div>
+
+    <div id="page2">
+        <section id="projects">
+            <h1 id="h1_p2">These are some of my projects</h1>
+            <div class="projects-grid">
+            <a class="project-tile" href="https://github.com/Mario488/MyFirstWebsite" target="_blank"><img src="/images/gig image for fiverr.png" width="500" height="270">
+                </a>
+                    <a class="project-tile" href="https://github.com/Mario488/MyFirstWebsite" target="_blank"><img
+                        src="/images/gig image for fiverr2.png" width="500" height="270">
+                </a>
+            </div>
+                    <a href="https://github.com/Mario488?tab=repositories" id="show_button" target="_blank">
+                        <button id="button">Show all</button>
+                    </a>            
+        </section>
+    </div>
+
+    <div id="page3">
+        <section id="contacts">
+            <h1 id="h1_p3">Let's work together. . .</h1>
+            <a href="https://github.com/Mario488" target="_blank" id="profile-link"><i class="fab fa-github-square">  GitHub</i></a>
+            <a href="https://www.facebook.com/mario.hristov.58760/" target="_blank" id="profile-link"><i class="fab fa-facebook-square">
+                    Facebook</i></a>
+            <a href="https://twitter.com/MarioHr42276406" target="_blank" id="profile-link"><i class="fab fa-twitter-square">  Twitter</i></a>
+            
+            <hr>
+            <p id="portfolio">This is my portfolio. You can see it in my GitHub account</p>
+        </section>
+    </div>
+
+</body>
+</html>
+
+
+
+//CSS
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+#welcome-section {
+    height: 100vh;
+}
+
+#navbar{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: #cc0000;
+        font-family: "Poppins", sans-serif;
+        color: white;
+        padding: 1em;
+        text-align: center;
+        z-index: 1;
+}
+    #navbar a {
+        text-decoration: none;
+        margin: 20px;
+        color: white;
+        font-weight: bold;
+        font-size: 1.2rem;
+        
+    }
+    #navbar a:hover{
+        color: yellow;
+        font-size: 1.4rem;
+        text-decoration: overline;
+    }
+    
+#page1{
+    height: 100%;
+    height: 100vh;
+    background-color: #63666A;
+}
+#page2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-image: linear-gradient(62deg, #62666a 0%, #181719 100%);
+}
+#page3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: top;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-color: #000;
+        background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+#job{
+        position: absolute;
+        top: 55%;
+        left: 51.5%;
+        transform: translate(-55%, -55%);
+        margin: 1;
+        font-size: 3rem;
+        font-family: "Raleway", sans-serif;
+        font-style: italic;
+        color: rgb(205, 3, 3);
+        
+}
+#job:hover{
+    letter-spacing: 7px;
+    animation: job 3s ease-in-out infinite;
+}
+@keyframes job {
+    0%{
+        letter-spacing: 3px;
+    }
+    25%{
+        letter-spacing: 7px;
+    }
+    50%{
+        letter-spacing: 5px;
+    }
+    75%{
+        letter-spacing: 3px;
+    }
+    100%{
+        letter-spacing: normal;
+    }
+}
+#h1_p1 {
+    font-size: 6rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: rgba(245, 245, 245, 0.811);
+}
+#h1_p1:hover{
+    color: lightblue;
+}
+#h1_p2 {
+    font-size: 2.5rem;
+    position: relative;    
+    top: 50px;
+    color: white; 
+    text-align: center;   
+    border-bottom: 0.2rem solid white;
+    
+}
+.project-tile{
+    color: red;
+    right: 70%;
+    top: 35%;
+    position: relative;
+    margin: 0 auto;
+
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+#h1_p3{
+        font-size: 4rem;
+        position: relative;
+        top: 50px;
+        color: white;
+        text-align: center;
+        top: 400px;
+        letter-spacing: 7px;
+}
+#profile-link{
+    /* position: relative;
+    bottom: 200px;
+    overflow: hidden;
+    color: red; */
+        display: inline;
+        justify-content: center;
+        width: 100%;
+        max-width: 980px;
+        margin-top: 4rem;
+        flex-wrap: wrap;
+        text-decoration: none;
+        color: white;
+        position: relative;
+        top: 400px;
+        right: 50%;
+        font-size: 1.7rem;
+        padding: 30px;
+}
+
+#code {
+    color: var(--main-gray);
+    transition: color 0.3s ease-out;
+}
+
+#profile-link {
+    font-size: 2.4rem;
+    position: relative;
+    right: 0;
+}
+
+#profile-link:hover {
+    color: rgb(224, 224, 39);
+}
+#code{
+    position: relative;
+    right: 250%;
+    top: 55%;
+    color: white;
+}
+#code:hover {
+    color: #ff7f50;
+}
+hr {
+    width: 273.5%;
+    height: 8px;
+    position: relative;
+    right: 600px;
+    margin: auto;
+    background-color: #666;
+    border: 0 none;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    top: 470px;
+    background: rgb(191, 10, 10);
+}
+#portfolio{
+    color: white;
+    font-size: 1.5rem;
+    position: relative;
+    top: 395px;
+    text-align: center;
+}
+#button{
+    font-family: '#welcome-section', sans-serif;
+    color: white;
+    background-color: black;
+    font-size: 1.3rem;
+    padding: 13px;
+    cursor: pointer;
+    font-weight: 600;
+    border: none;
+    position: relative;
+    right: -445px;
+    top: 330px;
+}
+#button:hover{
+    background-color: rgb(186, 12, 12);
+    transition: 0.5s;
+}
+.img1 {
+    border-radius: 5px;
+    position: relative;
+    top: 50px;
+}
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
